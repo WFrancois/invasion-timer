@@ -1,15 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Invasion Timer!{% endblock %}</title>
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
+<div class="content">
+    <div style="display:table;">
+        <div style="display:table-cell;vertical-align:middle;">
+            <div style="text-align:center;">{{ message }}</div>
+        </div>
+    </div>
+</div>
 </body>
-{{ message }}
 </html>
