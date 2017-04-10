@@ -1,4 +1,3 @@
-invasion-timer
-==============
+# Wow Invasion Timer
 
-A Symfony project created on April 11, 2017, 12:52 am.
+Invasion Timer for EU (for now)
