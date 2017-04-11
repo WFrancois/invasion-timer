@@ -11,7 +11,7 @@ namespace AppBundle;
 
 class InvasionTimer
 {
-    const EU_START = 1491768000;
+    const EU_START = 1491775200;
 
     const TIME_INTERVAL = 66600;
     const DURATION_INVASION = 6 * 60 * 60;

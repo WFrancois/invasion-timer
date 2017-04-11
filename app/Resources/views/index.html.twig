@@ -16,7 +16,7 @@
 <div class="content">
     <div style="display:table;">
         <div style="display:table-cell;vertical-align:middle;">
-            <div style="text-align:center;">{{ message }}</div>
+            <div style="text-align:center;" id="message">{{ message }}</div>
         </div>
     </div>
 </div>
@@ -25,11 +25,13 @@
     <input type="hidden" name="textNextInvasion" value="{{ textNextInvasion }}">
     <input type="hidden" name="timestampDefault" value="{{ timestampDefault }}">
     <input type="hidden" name="timeInterval" value="{{ timeInterval }}">
+    <input type="hidden" name="durationInvasion" value="{{ durationInvasion }}">
 </div>
 <script
         src="https://code.jquery.com/jquery-3.2.1.js"
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ asset('js/moment.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

@@ -21,7 +21,6 @@ class DefaultController extends Controller
 
         if($progress < InvasionTimer::DURATION_INVASION) {
             $invasionOnFor = InvasionTimer::DURATION_INVASION - $progress;
-
             $message = 'Invasion is in progress for another ' . gmdate('H \h\o\u\r\s i \m\i\n\u\t\e\s \a\n\d s \s\e\c\o\n\d\s', $invasionOnFor);
         } else {
             $nextInvasionIn = InvasionTimer::TIME_INTERVAL - $progress;
@@ -29,10 +28,11 @@ class DefaultController extends Controller
         }
         return $this->render('index.html.twig', [
             'message' => $message,
-            'textInvasionIsOn' => 'Invasion is in progress for another %hours% hours %minutes minutes and %seconds% seconds',
-            'textNextInvasion' => 'Next invasion in %hours% hours %minutes minutes and %seconds% seconds',
+            'textInvasionIsOn' => 'Invasion is in progress for another %hours% hours %minutes% minutes and %seconds% seconds',
+            'textNextInvasion' => 'Next invasion in %hours% hours %minutes% minutes and %seconds% seconds',
             'timestampDefault' => InvasionTimer::EU_START,
-            'timeInterval' => InvasionTImer::TIME_INTERVAL,
+            'timeInterval' => InvasionTimer::TIME_INTERVAL,
+            'durationInvasion' => InvasionTimer::DURATION_INVASION
         ]);
     }
 }
