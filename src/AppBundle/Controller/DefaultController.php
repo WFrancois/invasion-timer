@@ -27,6 +27,10 @@ class DefaultController extends Controller
         }
         return $this->render('index.html.twig', [
             'message' => $message,
+            'textInvasionIsOn' => 'Invasion is in progress for another %hours% hours %minutes minutes and %seconds% seconds',
+            'textNextInvasion' => 'Next invasion in %hours% hours %minutes minutes and %seconds% seconds',
+            'timestampDefault' => InvasionTimer::EU_START,
+            'timeInterval' => InvasionTImer::TIME_INTERVAL,
         ]);
     }
 }

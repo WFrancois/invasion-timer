@@ -11,8 +11,7 @@ namespace AppBundle;
 
 class InvasionTimer
 {
-    // TODO : Handle timezone
-    const EU_START = 1491775200;
+    const EU_START = 1491768000;
 
     const TIME_INTERVAL = 66600;
 
