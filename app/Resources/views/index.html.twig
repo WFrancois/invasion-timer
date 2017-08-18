@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Invasion Timer!{% endblock %}</title>
     <link rel="shortcut icon" href="/img/favicon.ico"/>
@@ -13,11 +13,39 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-<div class="content">
-    <div style="display:table;">
-        <div style="display:table-cell;vertical-align:middle;">
-            <div style="text-align:center;"><img src="/img/legion.png"></div>
-            <div style="text-align:center;" id="message">{{ message }}</div>
+<div id="fullpage">
+    <div class="section " id="section0">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="text-align:center;"><img src="/img/legion.png"></div>
+                <div style="text-align:center;" id="message">{{ message }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;padding:10%;">
+                <h1>Qu'est-ce qu'une invasion ?</h1>
+                <p>Une invasion c'est lorsque l'une des zones des îles brisées est temporairement attaquées par la
+                    Legion. Elle dure 6h, toutes les 12h30.</p>
+                <p>Les expéditions de la zone envahie sont remplacés par des expéditions spécifiques. Une
+                    quête est disponible au niveau 110 et demande d'accomplir
+                    4 de ces expéditions pour débloquer un scénario, octroyant loots et éclats de néant.</p>
+                <p>
+                    De plus, les expéditions de l'invasion sont disponibles à partir du niveau 98, et permettent de gagner de
+                    l'expérience.
+                </p>
+                <h1>What is an invasion?</h1>
+                <p>An invasion is when zones in the Broken Isles are attacked by the Legion. It lasts 6h, and is available every 12h30.</p>
+                <p>
+                    What it does: it replaces the world quest of the zone, with specific world quests.
+                    Furthermore, a quest is available at level 110 where you need to complete 4 of this world quest to unlock a scenario, which give loots and nethershards.
+                </p>
+                <p>
+                    Moreover, the world quests of the invasion are available at level 98, which give to the player a quick way to gain
+                    experience.
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -33,6 +61,16 @@
         integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{ asset('js/moment.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.fullPage.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            anchors: ['timing', 'whatIsIt'],
+            sectionsColor: ['#555', '#3c0600'],
+            scrollBar: true
+        });
+    });
+</script>
 </body>
 </html>
