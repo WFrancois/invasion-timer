@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Invasion Timer!{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ asset('/img/legion.png') }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="text-align:center;"><img src="{{ asset('/img/legion.png') }}"></div>
+                <div style="text-align:center;" id="message">{{ message }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;padding:0 10%;">
+                <h1>What is an invasion?</h1>
+                <p class="section__description">An invasion is when zones in the Broken Isles are attacked by the Legion. It lasts 6h, and is available every 12h30.</p>
+                <p class="section__description">
+                    What it does: it replaces the world quest of the zone, with specific world quests.
+                    Furthermore, a quest is available at level 110 where you need to complete 4 of this world quest to unlock a scenario, which give loots and nethershards.
+                </p>
+                <p class="section__description">
+                    Moreover, the world quests of the invasion are available at level 98, which give to the player a quick way to gain
+                    experience.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;padding:0 10%;">
+                <h1>Qu'est-ce qu'une invasion ?</h1>
+                <p class="section__description">Une invasion c'est lorsque l'une des zones des îles brisées est temporairement attaquées par la
+                    Legion. Elle dure 6h, toutes les 12h30.</p>
+                <p class="section__description">Les expéditions de la zone envahie sont remplacés par des expéditions spécifiques. Une
+                    quête est disponible au niveau 110 et demande d'accomplir
+                    4 de ces expéditions pour débloquer un scénario, octroyant loots et éclats de néant.</p>
+                <p class="section__description">
+                    De plus, les expéditions de l'invasion sont disponibles à partir du niveau 98, et permettent de gagner de
+                    l'expérience.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden-inputs">
+    <input type="hidden" name="textInvasionIsOn" value="{{ textInvasionIsOn }}">
+    <input type="hidden" name="textNextInvasion" value="{{ textNextInvasion }}">
+    <input type="hidden" name="timestampDefault" value="{{ timestampDefault }}">
+    <input type="hidden" name="timeInterval" value="{{ timeInterval }}">
+    <input type="hidden" name="durationInvasion" value="{{ durationInvasion }}">
+</div>
+<script src="{{ asset('build/app.js') }}"></script>
+<script>
+</script>
+</body>
+</html>
