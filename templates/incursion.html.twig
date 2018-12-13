@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Incursion Timer!{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ asset('/img/legion.png') }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div style="display:table;width:100%;height:100%;">
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="text-align:center;"><img src="{{ asset('/img/legion.png') }}"></div>
+                <div style="text-align:center;" id="message">{{ message }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden-inputs">
+    <input type="hidden" name="textInvasionIsOn" value="{{ textInvasionIsOn }}">
+    <input type="hidden" name="textNextInvasion" value="{{ textNextInvasion }}">
+    <input type="hidden" name="timestampDefault" value="{{ timestampDefault }}">
+    <input type="hidden" name="timeInterval" value="{{ timeInterval }}">
+    <input type="hidden" name="durationInvasion" value="{{ durationInvasion }}">
+</div>
+<script src="{{ asset('build/app.js') }}"></script>
+<script>
+</script>
+</body>
+</html>

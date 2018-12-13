@@ -1,3 +1,7 @@
+incursion:
+    path: /
+    host:       incursion.wisak.me
+    controller: App\Controller\HomeController:incursion
 index:
     path: /
     controller: App\Controller\HomeController
